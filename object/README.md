@@ -1,21 +1,22 @@
 # Array
 
-- [Clone an array](#clone-an-array)
+- [Clone an object](#clone-an-object)
+
 As an example, let's take an object with basic property that we want to clone
 ```
     const obj = [{name: "Viktor"}];
 ```
 
 # Clone an object
-1. ES6 Spread Operator
+**1. ES6 Spread Operator**
 ```js
 const newObj = {...obj};
 ```
-6. Object.assign() 
+**2. Object.assign()** 
 ```js
 const newArr = Object.assign({}, obj);
 ```
-7. JSON.parse && JSON.stringify [Deep copy]
+**3. JSON.parse && JSON.stringify [Deep copy]**
 
 ```js
 const newObj = JSON.parse(JSON.stringify(obj));
@@ -31,10 +32,9 @@ const obj = {
   isTest: true
 }
 const newObj = JSON.parse(JSON.stringify(obj));
-//newObj
-{ date: '2022-01-24T12:45:05.511Z', search: {}, isTest: true }
+//newObj { date: '2022-01-24T12:45:05.511Z', search: {}, isTest: true }
 ```
-8. structuredClone() [Deep copy]
+**4. structuredClone() [Deep copy]**
 
 Warning! structuredClone() is not part of ECMAScript, it was added to the platform-specific parts of many platforms and is still widely available (either now or soon):
 * Chrome 98
