@@ -1,6 +1,7 @@
-# Array
+# Object
 
 - [Clone an object](#clone-an-object)
+- [Check if object is empty](#check-if-object-is-empty)
 
 As an example, let's take an object with basic property that we want to clone
 ```
@@ -44,5 +45,15 @@ Warning! structuredClone() is not part of ECMAScript, it was added to the platfo
 * Deno 1.14
 ```js
 const newObj = structuredClone(obj);
+
+```
+
+
+## Check if object is empty
+```js
+const obj = {}
+if (Object.keys(obj).length === 0) {
+    console.log('empty')
+}
 
 ```
